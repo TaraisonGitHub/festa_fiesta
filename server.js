@@ -26,8 +26,8 @@ app.set("view engine", "handlebars");
 
 var routes = require("./app/controllers/fiesta_controller");
 
-require("./routes/html-routes.js")(app);
-require("./routes/api-routes.js")(app);
+require("./app/routes/html-routes.js");
+require("./app/routes/api-routes.js");
 
 // listen on port 3000
 db.sequelize.sync({ force: true }).then(function() {
