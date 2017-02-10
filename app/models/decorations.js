@@ -1,21 +1,21 @@
 module.exports = function(sequelize, DataTypes) {
-  var Music = sequelize.define("playlist", {
-    title: {
+  var Decor = sequelize.define("decor", {
+    decorations: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
         len: [1]
       }
     },
-    artist: {
-      type: DataTypes.STRING,
+    description: {
+      type: DataTypes.TEXT,
       allowNull: false,
       validate: {
         len: [1]
       }
     },
-    album: {
-      type: DataTypes.STRING,
+    cost: {
+      type: DataTypes.INT,
       allowNull: false,
       validate: {
         len: [1]
@@ -23,5 +23,5 @@ module.exports = function(sequelize, DataTypes) {
     },
   }
   );
-  return Music;
+  return Decor;
 };
