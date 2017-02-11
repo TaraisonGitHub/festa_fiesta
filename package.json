@@ -32,5 +32,8 @@
   "bugs": {
     "url": "https://github.com/TaraisonGitHub/festa_fiesta/issues"
   },
-  "homepage": "https://github.com/TaraisonGitHub/festa_fiesta#readme"
+  "homepage": "https://github.com/TaraisonGitHub/festa_fiesta#readme",
+  "engines": {
+    "node": "7.2.1"
+  },
 }

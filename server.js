@@ -1,12 +1,19 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 var methodOverride = require("method-override");
+var oauth = require('oauth').OAuth;
+var querystring = require('querystring');
 
 var app = express();
 var PORT = process.env.PORT || 8080;
 
 // Requiring our models for syncing
 var db = require("./app/models");
+
+app.use(express.cookieParser());
+app.use(express.session({
+    secret: 'slkdfjnlsrubgstrlgsunrtgstrq'
+}));
 
 // Serve static content for the app from the "public" directory in the application directory.
 app.use(express.static(__dirname + "./app/public"));
@@ -26,6 +33,7 @@ app.set("view engine", "handlebars");
 
 var routes = require("./app/controllers/fiesta_controller");
 
+require("./app/routes/login-routes.js")(app);
 require("./app/routes/html-routes.js");
 require("./app/routes/api-routes.js");
 
