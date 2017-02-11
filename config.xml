@@ -2,10 +2,10 @@
 <widget id="com.phonegap.festamobile" version="1.1.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>festamobile</name>
     <description>
-        A blank PhoneGap app.
+        An event management app.
     </description>
-    <author email="support@phonegap.com" href="http://phonegap.com">
-        PhoneGap Team
+    <author email="support@pfestafiesta.bootcamp" href="http://festafiesta.bootcamp">
+        Festa Fiesta Team
     </author>
     <content src="index.html" />
     <access origin="*" />
