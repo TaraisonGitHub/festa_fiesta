@@ -1,2 +1,14 @@
-# festa_fiesta
-Project #2 for UCF Coding Bootcamp: Party Planning Application
+# A Blank PhoneGap App
+
+## Usage
+
+### PhoneGap CLI
+
+    $ phonegap create my-app --template blank
+
+### Desktop
+
+In your browser, open the file:
+
+    /www/index.html
+
