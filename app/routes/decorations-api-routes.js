@@ -28,7 +28,6 @@ module.exports = function(app) {
 
   app.delete("/api/authors/:id", function(req, res) {
     db.Author.destroy({
-=======
     // create all the decorations
 app.post("/api/decorations", function(req, res) {
     db.Decor.create(req.body).then(function(dbDecor) {

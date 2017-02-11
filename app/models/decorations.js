@@ -15,11 +15,7 @@ module.exports = function(sequelize, DataTypes) {
       }
     },
     cost: {
-<<<<<<< HEAD
       type: DataTypes.INTEGER,
-=======
-      type: DataTypes.INT,
->>>>>>> master
       allowNull: false,
       validate: {
         len: [1]
