@@ -8,6 +8,7 @@ module.exports = function(sequelize, DataTypes) {
       }
     },
     cost: {
+<<<<<<< HEAD
       type: DataTypes.INTEGER
     }
   }
@@ -23,7 +24,6 @@ module.exports = function(sequelize, DataTypes) {
 //           });
 //         }
 //       }
-//     }
-  );
+//     });
   return Food;
 };
