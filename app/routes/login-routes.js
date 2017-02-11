@@ -1,9 +1,9 @@
 
-/ ===============================================================================
+// ===============================================================================
 // LOAD DATA
 // Linking our routes to our data sources.
 // ===============================================================================
-
+var passport = require('passport');
 
 
 
@@ -13,25 +13,32 @@
 
 module.exports = function(app) {
 
-    const client_id = '1144869418943929';
-    const client_secret = 'c48b01d62147cba4d2d8b2f924eb0dab';
+	// API GET Requests
+	// ---------------------------------------------------------------------------
 
-    const authorization_base_url = 'https://www.facebook.com/dialog/oauth';
-    const token_url = 'https://www.facebook.com/dialog/oauth';
-    const redirect_url = 'https://festafiesta.herokuapp.com';
+	// Define routes.
+	app.get('/',
+		function(req, res) {
+	  		res.render('home', { user: req.user });
+	});
 
-  // API GET Requests
-  // ---------------------------------------------------------------------------
+	app.get('/login',
+		function(req, res){
+	  	  	res.render('login');
+	});
 
-    //User is redirected to facebook if he/she is not yet logged in
-    app.get("/", function(req, res) {
-        if(!req.session.oauth_access_token) {
-		          res.redirect("/facebook_login");
-	     }
-    });
+	app.get('/login/facebook',
+		passport.authenticate('facebook'));
 
-    
+		app.get('/login/facebook/return',
+		passport.authenticate('facebook', { failureRedirect: '/login' }),
+		function(req, res) {
+		  res.redirect('/');
+	});
 
-
+	app.get('/profile',require('connect-ensure-login').ensureLoggedIn(),
+		function(req, res){
+	  		res.render('profile', { user: req.user });
+	});
 
 };
