@@ -8,3 +8,22 @@ module.exports = function(app) {
       res.json(results);
     });
   });
+
+    // create all the decorations
+app.post("/api/decorations", function(req, res) {
+    db.Decor.create(req.body).then(function(dbDecor) {
+      res.json(dbDecor);
+    });
+  });
+
+    // delete all the decorations
+app.delete("/api/decorations/:id", function(req, res) {
+    db.Decor.destroy({
+      where: {
+        id: req.params.id
+      }
+    }).then(function(dbDecor) {
+      res.json(dbDecor);
+    });
+  });
+};
