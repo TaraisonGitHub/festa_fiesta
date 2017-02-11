@@ -26,16 +26,16 @@ var app = express();
 var PORT = process.env.PORT || 8080;
 
 // Serve static content for the app from the "public" directory in the application directory.
-app.use(express.static(__dirname + "./app/public"));
+app.use(express.static(__dirname + "/app/public"));
 
 // override with POST having ?_method=DELETE
 app.use(methodOverride("_method"));
-var exphbs = require("express-handlebars");
-
-app.engine("handlebars", exphbs({
-  defaultLayout: "main"
-}));
-app.set("view engine", "handlebars");
+// var exphbs = require("express-handlebars");
+//
+// app.engine("handlebars", exphbs({
+//   defaultLayout: "main"
+// }));
+// app.set("view engine", "handlebars");
 
 // Requiring our models for syncing
 var db = require("./app/models");
@@ -55,7 +55,7 @@ app.use(passport.session());
 var routes = require("./app/controllers/fiesta_controller");
 
 require("./app/routes/login-routes.js")(app);
-require("./app/routes/html-routes.js");
+require("./app/routes/html-routes.js")(app);
 require("./app/routes/api-routes.js");
 
 // listen on port 8080
