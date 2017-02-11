@@ -27,17 +27,4 @@ app.delete("/api/decorations/:id", function(req, res) {
       res.json(dbDecor);
     });
   });
-
-/*
-  app.get("/api/authors/:id", function(req, res) {
-    // include all of the Author's Posts here
-    db.Author.findOne({
-      where: {
-        id: req.params.id
-      }
-    }).then(function(dbAuthor) {
-      res.json(dbAuthor);
-    });
-  });
-*/
 };
