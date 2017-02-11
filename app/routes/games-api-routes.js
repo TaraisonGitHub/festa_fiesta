@@ -9,4 +9,22 @@ module.exports = function(app) {
       res.json(results);
     });
   });
+
+    // create all the games
+app.post("/api/games", function(req, res) {
+    db.Games.create(req.body).then(function(dbGames) {
+      res.json(dbGames);
+    });
+  });
+
+    // delete all the games
+app.delete("/api/games/:id", function(req, res) {
+    db.Games.destroy({
+      where: {
+        id: req.params.id
+      }
+    }).then(function(dbGames) {
+      res.json(dbGames);
+    });
+  });
 };
