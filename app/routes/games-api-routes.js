@@ -1,11 +1,11 @@
-var dbThree = require("../models");
+var db = require("../models");
 
 
 // Skeleton of route assumes that the "games" model is linked to the party database
 module.exports = function(app) {
   app.get("/api/games", function(req, res) {
-    // get all the decorations
-    dbThree.decorations.findAll({}).then(function(results) {
+    // get all the games
+    db.Games.findAll({}).then(function(results) {
       res.json(results);
     });
   });
@@ -31,6 +31,27 @@ module.exports = function(app) {
 
   app.delete("/api/authors/:id", function(req, res) {
     db.Author.destroy({
+    // create all the games
+app.post("/api/games", function(req, res) {
+    db.Games.create(req.body).then(function(dbGames) {
+      res.json(dbGames);
+    });
+  });
+
+    // delete all the games
+app.delete("/api/games/:id", function(req, res) {
+    db.Games.destroy({
+      where: {
+        id: req.params.id
+      }
+    }).then(function(dbGames) {
+      res.json(dbGames);
+    });
+  });
+/*
+  app.get("/api/authors/:id", function(req, res) {
+    // include all of the Author's Posts here
+    db.Author.findOne({
       where: {
         id: req.params.id
       }

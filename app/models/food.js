@@ -8,6 +8,7 @@ module.exports = function(sequelize, DataTypes) {
       }
     },
     cost: {
+<<<<<<< HEAD
       type: DataTypes.INTEGER
     }
   }
@@ -24,6 +25,24 @@ module.exports = function(sequelize, DataTypes) {
 //         }
 //       }
 //     }
+=======
+      type: DataTypes.INT
+    }
+  },
+    {
+      // We're saying that we want our Guest to bring Food
+      classMethods: {
+        associate: function(models) {
+          // A Guest (foreignKey) is required or Food can't be made
+          Food.belongsTo(models.Guest, {
+            foreignKey: {
+              allowNull: false
+            }
+          });
+        }
+      }
+    }
+>>>>>>> master
   );
   return Food;
 };
