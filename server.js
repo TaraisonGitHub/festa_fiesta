@@ -30,10 +30,9 @@ app.use(require('express-session')({ secret: 'keyboard cat', resave: true, saveU
 app.use(passport.initialize());
 app.use(passport.session());
 
+require("./app/routes/api-routes.js")(app);
+require("./app/routes/html-routes.js")(app);
 
-// require("./app/routes/login-routes.js")(app);
-// require("./app/routes/html-routes.js")(app);
-// require("./app/routes/api-routes.js");
 
 // listen on port 8080
 db.sequelize.sync({ force: true }).then(function() {
