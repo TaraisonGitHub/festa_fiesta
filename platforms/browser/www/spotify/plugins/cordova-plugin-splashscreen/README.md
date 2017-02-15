@@ -91,11 +91,7 @@ You can use the following preferences in your `config.xml`:
     </platform>
 
 
-<<<<<<< HEAD
 ### Android and iOS Quirks
-=======
-### Android and iOS Quirks
->>>>>>> c2da210360e9b210e26e27c959bff6426f364482
 
 - `FadeSplashScreen` (boolean, defaults to `true`): Set to `false` to
   prevent the splash screen from fading in and out when its display
