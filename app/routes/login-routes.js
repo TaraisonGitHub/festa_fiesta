@@ -17,10 +17,10 @@ module.exports = function(app) {
 	// ---------------------------------------------------------------------------
 
 	// Define routes.
-	app.get('/',
-		function(req, res) {
-	  		res.render('home', { user: req.user });
-	});
+	// app.get('/',
+	// 	function(req, res) {
+	//   		res.render('home', { user: req.user });
+	// });
 
 	app.get('/login',
 		function(req, res){
