@@ -1,5 +1,7 @@
 node_modules
 .DS_STORE
+festa_fiesta.iml
+.idea
 COPYRIGHT
 LICENSE
 NOTICE

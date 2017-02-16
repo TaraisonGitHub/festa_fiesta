@@ -1,11 +1,24 @@
 module.exports = function(sequelize, DataTypes) {
-  var Guest = sequelize.define("rsvp", {
+  var Rsvp = sequelize.define("Rsvp", {
+    id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+      autoIncrement: true
+    },
     name: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
         len: [1]
       }
+    },
+    confirmed: {
+      type: DataTypes.BOOLEAN,
+      default: 0
+    },
+    attending: {
+      type: DataTypes.BOOLEAN,
+      default: 0
     },
     description: {
       type: DataTypes.TEXT,
@@ -16,5 +29,5 @@ module.exports = function(sequelize, DataTypes) {
     },
   }
   );
-  return Guest;
+  return Rsvp;
 };
