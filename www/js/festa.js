@@ -2,8 +2,8 @@ $(document).ready(function(){
 
 var counter = 0;
 var counter2 = 0;
-var ingredientsArray = [];
-var instructionsArray = [];
+var eventArray = [];
+var guestArray = [];
 //var rand = Math.floor(Math.random() * 30) + 1;
 
 function changeLocation(){
@@ -85,7 +85,7 @@ $.ajax({ // begin ajax for event and guest list search
 
                        }// end for loop for event guests
 
-                       console.log(ingredientsArray) 
+                       console.log(guestArray) 
                        localStorage.setItem("guestList", JSON.stringify(guests));
                        localStorage.setItem("picture",JSON.stringify(guests.image));
                             $.ajax({ // begin internal ajax call for event guests
@@ -94,7 +94,7 @@ $.ajax({ // begin ajax for event and guest list search
                               type: "POST",
                               data: {
                                     defaultCss: false,
-                                    ingredientList:eventArray.join("\n")  , // try putting the actual guest name here 
+                                    guestList:eventArray.join("\n")  , // try putting the actual guest name here 
                                     servings: 4
                                  },
                               beforeSend: function(xhr){xhr.setRequestHeader('X-Mashape-Key', 'CGRYW6NXCFHP2ZBUUVTNMAKT5N25652QETXLPP5FFHRKQL3YED');},

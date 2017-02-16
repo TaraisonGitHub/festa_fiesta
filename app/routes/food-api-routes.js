@@ -39,7 +39,7 @@ module.exports = function(app) {
   });
 
   // DELETE route for deleting food
-  app.delete("/api/Food/:id", function(req, res) {
+  app.delete("/api/food/:id", function(req, res) {
     db.Food.destroy({
       where: {
         id: req.params.id
