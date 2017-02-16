@@ -8,7 +8,6 @@ module.exports = function(sequelize, DataTypes) {
       }
   },
 
-    {
       classMethods: {
         associate: function(models) {
           Guest.hasMany(models.Food, {
@@ -16,7 +15,6 @@ module.exports = function(sequelize, DataTypes) {
           });
         }
       }
-    }
   });
   return Guest;
 };
