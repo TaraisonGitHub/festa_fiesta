@@ -7,59 +7,48 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+    <!-- Bootstrap Social CSS -->
+    <link rel="stylesheet" href="css/bootstrap-social">
+    
+    <!--CSS-->
     <link rel="stylesheet" href="css/festa.css">
 
     <!-- Font Awesome Glyphicons -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    
     <title>Festa Fiesta | The All-In-One Party Planner</title>
   </head>
+
   <body>
-
-    <script>
-
-      window.fbAsyncInit = function() {
-        FB.init({
-          appId      : '1144869418943929',
-          cookie     : true,
-          xfbml      : true,
-          version    : 'v2.8'
-        });
-        FB.AppEvents.logPageView();
-      };
-
-      (function(d, s, id){
-         var js, fjs = d.getElementsByTagName(s)[0];
-         if (d.getElementById(id)) {return;}
-         js = d.createElement(s); js.id = id;
-         js.src = "//connect.facebook.net/en_US/sdk.js";
-         fjs.parentNode.insertBefore(js, fjs);
-       }(document, 'script', 'facebook-jssdk'));
-
-    </script>
 
     <div class="container">
 
       <div class="row responsive-utilities-test visible-on">
-        <div class="wrapper"><h1>Festa Fiesta! An event planner for the planner.</h1>
-          <button type="button" class="btn btn-primary" onclick="myFunction()"><i class="fa fa-facebook-square" aria-hidden="true"></i>
+        <div class="wrapper">
+
+        <!-- Page Header -->
+        <h1>Festa Fiesta!</h1>
+        <p>An event planner for the planner.</p>
+          
+          <!-- Facebook Button -->
+          <button type="button" class="btn btn-primary" onclick="myFunction()"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i>
           Facebook Login</button>
-        </div>
+        </div> <!-- END Wrapper -->
       </div>
-      <div class="row responsive-utilities-test visible-on">\
-        <div class="clearer"></div>
-    </div>
 
-    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+
+
+    <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    
+    <!-- Tether -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    
+    <!-- Bootstrap JS -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    
     <script src="js/festa.js"></script>
-    <script>
-
-            function myFunction() {
-          document.getElementById("thatone").innerHTML = "meh";
-        }
-    </script>
 
   </body>
 </html>

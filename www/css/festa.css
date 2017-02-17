@@ -38,8 +38,8 @@ transition: all 0.1s;
 
 .logo {
 display:block;
-    width:75px;
-    height:75px;
+    width:90px;
+    height:90px;
     -webkit-border-radius: 50%;
 -moz-border-radius: 50%;
 border-radius: 50%;
@@ -47,7 +47,7 @@ border:5px solid #eee;
     margin-bottom:50px;
 background-color:#eee;
 margin: auto;
-margin-top: 10px;
+margin-top: 25px;
 }
 
 .bottom {
@@ -59,7 +59,7 @@ margin-top: 10px;
     font-weight: bold;
     color:#888;
     padding:0px;
-    margin-top: 5px;
+    margin-top: 15px;
 }
 
 
