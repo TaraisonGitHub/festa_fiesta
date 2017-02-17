@@ -7,19 +7,12 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-
-    <!-- Bootstrap Social CSS -->
-    <link rel="stylesheet" href="css/bootstrap-social">
-    
-    <!--CSS-->
     <link rel="stylesheet" href="css/festa.css">
 
     <!-- Font Awesome Glyphicons -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-    
     <title>Festa Fiesta | The All-In-One Party Planner</title>
   </head>
-
   <body>
 
     <script>
@@ -47,59 +40,26 @@
     <div class="container">
 
       <div class="row responsive-utilities-test visible-on">
-        <div class="wrapper">
-
-        <!-- Page Header -->
-        <h1>Festa Fiesta!</h1>
-        <p>An event planner for the planner.</p>
-          
-          <!-- Facebook Button -->
-          <button type="button" class="btn btn-primary" onclick="myFunction()"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i>
+        <div class="wrapper"><h1>Festa Fiesta! An event planner for the planner.</h1>
+          <button type="button" class="btn btn-primary" onclick="myFunction()"><i class="fa fa-facebook-square" aria-hidden="true"></i>
           Facebook Login</button>
-        </div> <!-- END Wrapper -->
+        </div>
       </div>
-
-      <div class="row responsive-utilities-test visible-on">
-       <!-- Create New Event -->
-        <div class="client">
-          <span class="logo" id="createEvent"></span>
-          <h2>Create Event</h2>
-        </div>
-
-       <!-- My Events -->
-        <div class="client">
-          <span class="logo" id="myEvents"></span>
-          <h2>My Events</h2>
-        </div>
-
-       <!-- Invitations -->
-        <div class="client bottom">
-          <span class="logo" id="invites"></span>
-          <h2>Invitations</h2>
-        </div>
-
-       <!-- RSVP -->
-        <div class="client bottom">
-          <span class="logo" id="rsvp"></span>
-          <h2>RSVP</h2>
-        </div>
-
-      </div>
-     
+      <div class="row responsive-utilities-test visible-on">\
         <div class="clearer"></div>
+    </div>
 
-    </div> <!-- Container END -->
-
-    <!-- jQuery -->
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-    
-    <!-- Tether -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-    
-    <!-- Bootstrap JS -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-    
     <script src="js/festa.js"></script>
+    <script>
+
+            function myFunction() {
+          document.getElementById("thatone").innerHTML = "meh";
+        }
+    </script>
 
   </body>
 </html>

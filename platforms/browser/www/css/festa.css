@@ -12,16 +12,19 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4676e', end
 }
 
 .container {
-    margin:50px auto;
-    width:747px;
+    margin:30px auto;
+    width:100%;
+    height:100%;
 
 }
 
 .client {
-    width:248px;
-    height:220px;
+    width:150px;
+    height:150px;
     background-color:#fff;
     text-align:center;
+    margin: auto;
+    margin-top: 15px;
     float:left;
     font-family: 'Open Sans', sans-serif;
     letter-spacing:1px;
@@ -41,17 +44,24 @@ display:block;
 -moz-border-radius: 50%;
 border-radius: 50%;
 border:5px solid #eee;
-    margin-bottom:30px;
+    margin-bottom:50px;
 background-color:#eee;
-margin:35px auto;
+margin: auto;
+margin-top: 10px;
+}
+
+.bottom {
+  margin-top: 60px;
 }
 
 .client h2, .client h3 {
-    font-size:16px;
+    font-size:20px;
+    font-weight: bold;
     color:#888;
     padding:0px;
-    margin:0px;
+    margin-top: 5px;
 }
+
 
 .client h3 {
     font-weight:100;
@@ -96,7 +106,8 @@ box-shadow: 10px 10px 91px 0px rgba(193,79,82,1);
     font-family: 'Open Sans', sans-serif;
     color:#fff;
     padding:20px;
-    width:707px;
+    width:100%;
+    height:100%;
 
 
     position:relative;
