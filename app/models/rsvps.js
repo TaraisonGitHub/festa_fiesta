@@ -1,10 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-  var Rsvp = sequelize.define("Rsvp", {
-    id: {
-      type: DataTypes.INTEGER,
-      primaryKey: true,
-      autoIncrement: true
-    },
+  var Guest = sequelize.define("rsvp", {
     name: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -12,22 +7,14 @@ module.exports = function(sequelize, DataTypes) {
         len: [1]
       }
     },
-    confirmed: {
-      type: DataTypes.BOOLEAN,
-      default: 0
-    },
-    attending: {
-      type: DataTypes.BOOLEAN,
-      default: 0
-    },
-    description: {
-      type: DataTypes.TEXT,
-      allowNull: false,
-      validate: {
-        len: [1]
+
+    classMethods: {
+      associate: function(models) {
+        Guest.hasMany(models.Food, {
+          onDelete: "cascade"
+        });
       }
-    },
-  }
-  );
-  return Rsvp;
+    }
+  });
+  return Guest;
 };
