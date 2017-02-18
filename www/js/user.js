@@ -1,28 +1,33 @@
 $(document).ready(function() {
+    console.log('User.js loaded');
 
     //Getting registration details
-    var firstname = $('#firstname');
-    var lastname = $('#lastname');
+    var fullname = $('#fullname');
     var username = $('#username');
     var password = $('#password');
     var email = $('#email');
+    // $('#fblogin').on('click', authenticatefb);
+
+    // function authenticatefb() {
+    //     alert('go to facebook');
+    //     location.href = 'auth/facebook';
+    // }
 
     $('#regButton').on('click', submitRegistration);
 
     function submitRegistration(event) {
-        console.log('Name is ' + firstname.val() + ' ' + lastname.val());
+        console.log('Name is ' + fullname.val());
         event.preventDefault();
 
-        if(!firstname.val().trim() || !lastname.val().trim() || !username.val().trim()
+        if(!fullname.val().trim() || !username.val().trim()
         || !password.val().trim() || !email.val().trim()) {
-            alert('empty');
+            // alert('empty');
             return;
         }
 
         //Create a registration object
         var user = {
-            firstname: firstname.val().trim(),
-            lastname: lastname.val().trim(),
+            name: fullname.val().trim(),
             username: username.val().trim(),
             password: password.val().trim(),
             email: email.val().trim()
@@ -31,10 +36,13 @@ $(document).ready(function() {
 
         $.ajax({
             type: 'POST',
-            url: '/api/register',
+            url: '/register',
             data: user,
-            done: function(){
-                alert('done');
+            success: function(data){
+                if(data === 'undefined'){
+                    window.location.href='/login';
+                }
+
             }
         });
     }

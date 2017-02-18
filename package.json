@@ -4,8 +4,11 @@
   "description": "The perfect app for planning your next party",
   "main": "server.js",
   "dependencies": {
+    "Promise": "^1.0.5",
+    "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.16.0",
     "connect-ensure-login": "^0.1.1",
+    "connect-flash": "^0.1.1",
     "cookie-parser": "^1.4.3",
     "express": "^4.14.1",
     "express-handlebars": "^3.0.0",
@@ -16,6 +19,7 @@
     "node-eventbrite": "0.0.13",
     "passport": "^0.3.2",
     "passport-facebook": "^2.1.1",
+    "passport-local": "^1.0.0",
     "sequelize": "^3.30.2",
     "spotify-web-api-node": "^2.3.6"
   },
